@@ -1,18 +1,19 @@
-export function Card({
-  className,
-  title,
-  children,
-  href,
-}: {
+'use client';
+
+import React, { ReactNode } from 'react';
+
+type Props = {
   className?: string;
   title: string;
-  children: React.ReactNode;
+  children: ReactNode;
   href: string;
-}): JSX.Element {
+};
+
+export const Card = ({ className, title, children, href }: Props) => {
   return (
     <a
       className={className}
-      href={`${href}?utm_source=create-turbo&utm_medium=basic&utm_campaign=create-turbo"`}
+      href={href}
       rel="noopener noreferrer"
       target="_blank"
     >
@@ -22,4 +23,4 @@ export function Card({
       <p>{children}</p>
     </a>
   );
-}
+};
