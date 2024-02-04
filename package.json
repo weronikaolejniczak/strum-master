@@ -1,5 +1,5 @@
 {
-  "name": "aport-me",
+  "name": "strum-master",
   "private": true,
   "scripts": {
     "build": "turbo build",
